@@ -66,7 +66,7 @@ export default function App() {
       {errors.phone && (
         <p role="alert">Enter a proper phone number with 10 digits</p>
       )}
-      <input
+      <input    
         type="date"
         placeholder="Enter your Date of Birth"
         {...register("dob", { required: true })}
