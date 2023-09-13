@@ -35,7 +35,7 @@ export default function App() {
 
   function onSubmit (data){
     console.log(data)
-    axios.post("http://localhost:5173/formdata",data)
+    axios.post("http://localhost:8080/formdata",{data})
     .then((result)=>{
       console.log(result.data)
     })
