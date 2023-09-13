@@ -9,6 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({ origin: "http://localhost:5173" }))
 
  
+app.post("/formdata",async(req,res)=>{
+    console.log(req.body.data)
+})
+
+
 
 // connection.then(() => {
     app.listen(8080, () => {

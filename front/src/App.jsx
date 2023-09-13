@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import axios from "axios"
 
 export default function App() {
   // const {
@@ -31,7 +32,17 @@ export default function App() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  function onSubmit (data){
+    console.log(data)
+    axios.post("http://localhost:5173/formdata",data)
+    .then((result)=>{
+      console.log(result.data)
+    })
+
+
+  }
+  // const onSubmit = (data) => console.log(data);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
