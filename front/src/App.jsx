@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import axios from "axios"
+import "./App.css"
 
 export default function App() {
   // const {
@@ -47,6 +48,8 @@ export default function App() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
+      id="yName"
+      
         type="text"
         placeholder="Enter your full name"
         {...register("fullName", {
@@ -59,12 +62,14 @@ export default function App() {
       />
       {errors.fullName && <p role="alert">Full name is required</p>}
       <input
+      id="email"
         type="email"
         placeholder="Enter your email"
         {...register("email", { required: true })}
       />
       {errors.email && <p role="alert">Enter a valid email</p>}
       <input
+      id="yPhone"
         type="text"
         placeholder="Enter your phone number"
         {...register("phone", {
@@ -77,7 +82,8 @@ export default function App() {
       {errors.phone && (
         <p role="alert">Enter a proper phone number with 10 digits</p>
       )}
-      <input    
+      <input   
+      id="date" 
         type="date"
         placeholder="Enter your Date of Birth"
         {...register("dob", { required: true })}
@@ -117,7 +123,9 @@ export default function App() {
       </div>
       {errors.gender && <p role="alert">Select your gender</p>}
 
+
       <input
+      id="aadhaarFront"
         type="file"
         placeholder="Upload Aadhaar Front"
         {...register("aadharFront", { required: true })}
@@ -125,6 +133,7 @@ export default function App() {
       {errors.aadharFront && <p role="alert">Upload your Aadhaar Front Side</p>}
 
       <input
+      id="aadhaarBack"
         type="file"
         placeholder="Upload Aadhaar Back"
         {...register("aadharBack", { required: true })}
@@ -132,6 +141,7 @@ export default function App() {
       {errors.aadharBack && <p role="alert">Upload your Aadhaar Back Side</p>}
 
       <input
+      id="fName"
         type="text"
         placeholder="Enter your parent / guardian / spouse name"
         {...register("fname", {
@@ -144,6 +154,7 @@ export default function App() {
       {errors.fname && <p role="alert">Parent&quot;s name is required</p>}
 
       <input
+      id="fPhone"
         type="text"
         placeholder="Enter your parent / guardian / spouse phone number"
         {...register("fphone", {
@@ -158,6 +169,7 @@ export default function App() {
       )}
 
       <textarea
+      
         placeholder="Enter your local address (where you stay in Jaipur)"
         {...register("laddress", { required: true })}
       ></textarea>
@@ -199,6 +211,7 @@ export default function App() {
 
       <div>
         <input
+        id="degree"
           type="text"
           placeholder="Your latest educational degree / diploma"
           {...register("qualification", {
